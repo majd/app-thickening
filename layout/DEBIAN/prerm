@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [[ $1 == remove || $1 == purge ]]; then
+    /bin/launchctl unload /System/Library/LaunchDaemons/com.apple.appstored.plist &> /dev/null
+    /bin/launchctl load /System/Library/LaunchDaemons/com.apple.appstored.plist
+
+    /bin/launchctl unload /System/Library/LaunchDaemons/com.apple.itunesstored.plist &> /dev/null
+    /bin/launchctl load /System/Library/LaunchDaemons/com.apple.itunesstored.plist
+fi
+
+exit 0

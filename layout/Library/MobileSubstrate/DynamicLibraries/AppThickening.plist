@@ -1,0 +1,10 @@
+{
+	SupportsRoot = 1;
+	Filter = {
+		Mode = Any;
+		Executables = (
+			itunesstored,
+			appstored,
+		);
+	};
+}
